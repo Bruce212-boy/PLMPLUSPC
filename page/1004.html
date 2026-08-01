@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>产品整机</title>
+<script type="text/javascript" src="../../D_Javascript/ht_kuangjia/jquery.min.js"></script>
+<script src="../../D_Javascript/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../D_Javascript/ht_kuangjia/layui.js"></script>
+
+
+<script type="text/javascript">
+document.write("<link rel='stylesheet' type='text/css' class='skin_sel_class'/>");
+document.write("<link rel='stylesheet' type='text/css' href='../C_Style/lay-css/css/layui.css?random=" + Math.random() + "' />");
+document.write("<link rel='stylesheet' type='text/css' href='../../C_Style/Public.css?random=" + Math.random() + "' />");
+document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xw_grid.css?random=" + Math.random() + "' />");
+document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xwStyle.css?random=" + Math.random() + "' />");
+document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/Public.js?random=" + Math.random() + "'></s" + "cript>");
+document.write("<script type='text/javascript' src='../../D_Javascript/utils/XwUtils.js?random=" + Math.random() + "'></s" + "cript>");
+document.write("<script type='text/javascript' src='../D_Javascript/utils/Api.js?random=" + Math.random() + "'></s" + "cript>");
+document.write("<script type='text/javascript' src='../D_Javascript/utils/Constans.js?random=" + Math.random() + "'></s" + "cript>");
+
+document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/xw_grid.js?random=" + Math.random() + "'></s" + "cript>");
+// document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/safety.js?random=" + Math.random() + "'></s" + "cript>");
+document.write("<script type='text/javascript' src='../../D_Javascript/page/1004.js?random=" + Math.random() + "'></s" + "cript>");
+document.write("<script type='text/javascript' src='../../D_Javascript/page/show_big_img.js?random=" + Math.random() + "'></s" + "cript>");
+</script>
+
+<style>
+.div_file_area { width: calc(100%); height: 240px; overflow-y: auto; box-sizing: border-box; display: flex;
+                        padding: 10px 10px; border: solid 1px var(--xw-grid-td-border-bgc); border-top: none; }
+.div_file_area_item { display: flex; height: 30px; line-height: 29px; border: 1px solid #333; background-color: #ddd; border-radius: 3px; margin-right: 10px; box-sizing: border-box; }
+.div_file_area_item_text { font-size: 14px; user-select: none; cursor: pointer; border-right: 1px solid #555; padding: 0 7px 0 7px; width: 145px; overflow: hidden; white-space: nowrap; box-sizing: border-box; }
+.div_file_area_item_text:hover { background-color: #bbb; }
+.div_file_area_item_close { color: #333; padding: 0 3px; border-radius: 3px; }
+.div_file_area_item_close:hover { color: #000; background-color: #bbb;  }
+
+.div_file_area_item2_text { font-size: 14px; user-select: none; cursor: pointer; padding: 0 10px 0 10px; overflow: hidden; box-sizing: border-box; border-radius: 3px; }
+.div_file_area_item2_text:hover { background-color: #bbb; }
+
+</style>
+
+
+
+</head>
+
+<body style="height:100%">
+<div class="main min-wid600">
+    <div class="content">
+        <div class="top_box bbt_none">
+            <div class="top_box_title">
+                产品整机
+            </div>
+            <input id="hid_img_new_tb_1" type="file" style="display:none">
+            <div class="top_box_btn_group">
+                <div onclick="csh_add_prod();" class="top_box_btn_item add"><span class="my-icon layui-icon layui-icon-addition"></span><span class="text">添加</span></div>
+            </div>
+            <div class="top_box_btn_group mgl_auto">
+                <div onclick="newtb_click_pt_img_1();" class="top_box_btn_item"><span class="my-icon layui-icon layui-icon-upload"></span><span class="text fcc">上传图片</span></div>
+                <div onclick="csh_update_prod();" class="top_box_btn_item"><span class="my-icon layui-icon layui-icon-edit"></span><span class="text fcc">修改</span></div>
+                <div onclick="csh_del_prod();" class="top_box_btn_item"><span class="my-icon layui-icon layui-icon-delete fcc"></span><span class="text fcc">删除</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div id="con_kh" class="xw_grid_main" style="height: calc(100vh - 90px);">
+            <div id="list_1" class="xw_grid_con" ></div>
+        </div>
+        <div id="pager" class="pager pager-border bt-none"></div>
+    </div>
+</div>
+
+<script>
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+const BTN_PERMS = {
+    "PERMS_CUST_INFO": {
+        "ALL_MY_INFO_UP": 1,
+        "ALL_MY_INFO_DOWN": 2,
+        "ADD_CUST": 3,
+        "UPDATE_CUST": 4,
+        "DEL_CUST": 5,
+        "EXPORT_EXCEL": 6,
+        "SET_OWNER": 7,
+        "SET_PUB_SEA": 8,
+        "SALE_WORK_ORD": 9,
+        "QUTATION_INFO": 10,
+        "CONTRACT_INFO": 11,
+        "PROJECT_INFO": 12,
+        "SENIOR_CONTACT": 13,
+        "ADD_SALE_WORK": 14,
+        "UPDATE_SALE_WORK": 15,
+        "DEL_SALE_WORK": 16,
+        "ADD_QUTATION": 17,
+        "UPDATE_QUTATION": 18,
+        "DEL_QUTATION": 19,
+        "ADD_CONTRACT": 20,
+        "UPDATE_CONTRACT": 21,
+        "DEL_CONTRACT": 22,
+        "ADD_PROJECT": 23,
+        "UPDATE_PROJECT": 24,
+        "DEL_PROJECT": 25,
+        "ADD_PROJ_WORK_ORD": 26,
+        "UPDATE_PROJ_WORK_ORD": 27,
+        "DEL_PROJ_WORK_ORD": 28
+    },
+    "PERMS_SALE_TEMPLATE": {}
+}

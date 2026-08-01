@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>公海客户</title>
+    <script type="text/javascript" src="../../D_Javascript/ht_kuangjia/jquery.min.js"></script>
+    <script src="../../D_Javascript/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../D_Javascript/ht_kuangjia/layui.js"></script>
+    <script type="text/javascript">
+        document.write("<link rel='stylesheet' type='text/css' class='skin_sel_class'/>");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/lay-css/css/layui.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/iconfont2/iconfont.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/Public.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xw_grid.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xwStyle.css?random=" + Math.random() + "' />");
+
+        document.write("<script type='text/javascript' src='../../D_Javascript/ht_kuangjia/Public.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/ht_kuangjia/xlsx.full.min.js?random=" + Math.random() + "'></s" + "cript>");
+        // document.write("<script type='text/javascript' src='../../D_Javascript/ht_kuangjia/safety.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/XwUtils.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/Api.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/Constans.js?random=" + Math.random() + "'></s" + "cript>");
+
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/xw_grid.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../D_Javascript/page/1002.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../D_Javascript/page/show_big_img.js?random=" + Math.random() + "'></s" + "cript>");
+    </script>
+
+    <style>
+
+.icon-cust { margin-top: 0px !important; font-size: 26px; color: #1296db; }
+.icon-cust:hover { color: #ff0000; }
+
+.xw_left_con { width: 300px; }
+.xw_right_con { width: calc(100% - 305px); }
+.con_height { height: calc(100vh - 89px); }
+.con_height_nopage { height: calc(100vh - 56px); }
+.tk_con_height88 { height: 88%; }
+.tk_con_height95 { height: 95%; }
+.tk_con_height95-40 { height: calc(95% - 40px); }
+.tk_con_height99-10 { height: calc(99% - 10px); }
+.tk_con_height68 { height: 68%; }
+.flex_box { display: flex; width: 100%; justify-content: space-between; }
+</style>
+
+</head>
+
+<body style="height:100%">
+    <div class="main min-wid1200">
+        <div class="content">
+            <div class="top_box bbt_none">
+                <div class="top_box_title" data-word="公海客户">
+                    公海客户
+                </div>
+
+                <div class="top_box_btn_group">
+                    <table class="qb_table">
+                        <tr>
+                            <td>
+                                <input id="txt_qb_kh_start_time" class="date_input" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" type="text" placeholder="开始日期"/>
+                            </td>
+                            <td>
+                                <span data-word="至">至</span>
+                            </td>
+                            <td>
+                                <input id="txt_qb_kh_end_time" class="date_input" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" type="text" placeholder="结束日期"/>
+                            </td>
+                            <td>
+                                <select id="sel_qb_sheng" onclick="get_tt_shi();" class="select_city" type="text"></select>
+                            </td>
+                            <td>
+                                <select id="sel_qb_shi" onclick="get_tt_xian();" class="select_city" type="text" placeholder="请选择市">
+                                    <option value="-1">请选择市</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="sel_qb_xian" class="select_city" type="text" placeholder="请选择县">
+                                    <option value="-1">请选择县</option>
+                                </select>
+                            </td>
+                            <td>
+                                <div onclick="getdata_1(1);" class="top_box_btn_item"><span class="my-icon layui-icon layui-icon-search"></span><span class="text fcc" data-word="查询">查询</span></div>
+                            </td>
+                            <td>
+                                <div onclick="csh_export_excel();" class="top_box_btn_item"><span class="my-icon layui-icon layui-icon-export"></span><span class="text fcc" data-word="Excel导出">Excel导出</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div class="top_box_btn_group mgl_auto" data-expand>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div id="con_1" class="content wid100">
+                <div class="xw_grid_main xw_grid_main_style con_height">
+                    <div id="list_1" class="xw_grid_con"></div>
+                </div>
+                <div id="pager_1" class="pager pager-border bt-none"></div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
+
+

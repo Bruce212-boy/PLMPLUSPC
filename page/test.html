@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>cascader级联选择器组件</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <style type="text/css">
+        .cascader-box {
+            position: relative;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .cascader-text-div {
+            width: 178px;
+            height: 35px;
+            line-height: 35px;
+            border: 1px solid #c0c4cc;
+            padding: 0 10px;
+            cursor: pointer;
+        }
+
+        .cascader-arrow-down {
+            width: 0;
+            height: 0;
+            border-top: 8px solid #aaa;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            float: right;
+            margin-top: 15px;
+        }
+
+        .cascader-arrow-up {
+            width: 0;
+            height: 0;
+            border-bottom: 8px solid #aaa;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            float: right;
+            margin-top: 15px;
+        }
+
+        .cascader-area {
+            width: 200px;
+            height: 172px;
+            box-shadow: 0 0 13px #ccc;
+            position: absolute;
+            left: 0px;
+            top: 40px;
+        }
+
+        .cascader-div {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 198px;
+            border: 1px solid #c0c4cc;
+            background: #fff;
+            min-height: 150px;
+            z-index: 10;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .cascader-item {
+            padding: 0 10px;
+            height: 35px;
+            line-height: 35px;
+            cursor: pointer;
+            position: relative;
+        }
+
+            .cascader-item:hover {
+                background: #e3e3e3;
+            }
+
+        .cascader-item-action {
+            background: #e3e3e3 !important;
+        }
+
+        .ci-arrow {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: 2px solid #999;
+            width: 8px;
+            height: 8px;
+            border-left: none;
+            border-bottom: none;
+            transform: rotate( 45deg);
+        }
+
+        .cascader-scrollbar {
+            scrollbar-face-color: #fcfcfc;
+            scrollbar-highlight-color: #6c6c90;
+            scrollbar-shadow-color: #fcfcfc;
+            scrollbar-3dlight-color: #fcfcfc;
+            scrollbar-arrow-color: #240024;
+            scrollbar-track-color: #fcfcfc;
+            scrollbar-darkshadow-color: #48486c;
+            scrollbar-base-color: #fcfcfc
+        }
+
+        /* 设置滚动条的样式 */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        /* 滚动竖线 */
+        ::-webkit-scrollbar-track {
+            border-radius: 6px;
+        }
+        /* 滚动条滑块 */
+        ::-webkit-scrollbar-thumb {
+            border-radius: 6px;
+            background: rgba(0,0,0,0.1);
+        }
+            ::-webkit-scrollbar-thumb:window-inactive {
+                background: rgba(255,0,0,0.4);
+            }
+    </style>
+    <div id="casc_box1" style="width:600px;height:500px;background:#fff;padding:10px;margin:0 auto;margin-top:30px;border-radius:10px;box-shadow:0 0 13px #ccc;">
+        
+        <div class="cascader-box" style="margin-top:200px;">
+            <div id="cascader2" class="cascader-text-div">
+                <span id="casc_text">请选择所属值</span>
+                <div class="cascader-arrow-down"></div>
+            </div>
+
+            <div class="cascader-area" style="display:none;"></div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+
+<!--交互js-->
+<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        var jsonArr = [
+            {
+                text: '一级文本',
+                value: '1',
+                children: [
+                    {
+                        text: '二级文本1',
+                        value: '1',
+                        children: []
+                    },
+                    {
+                        text: '二级文本2',
+                        value: '2',
+                        children: [
+                            {
+                                text: '三级文本1',
+                                value: '1',
+                                children: []
+                            },
+                            {
+                                text: '三级文本2',
+                                value: '2',
+                                children: []
+                            },
+                        ]
+                    },
+                    {
+                        text: '二级文本3',
+                        value: '3',
+                        children: []
+                    }
+                ]
+            },
+            {
+                text: '一级文本2',
+                value: '2',
+                children: []
+            },
+            {
+                text: '一级文本3',
+                value: '3',
+                children: [
+                    {
+                        text: '二级文本1',
+                        value: '1',
+                        children: []
+                    },
+                    {
+                        text: '二级文本2',
+                        value: '2',
+                        children: []
+                    }
+                ]
+            },
+            {
+                text: '一级文本4',
+                value: '4',
+                children: []
+            },
+            {
+                text: '一级文本5',
+                value: '5',
+                children: []
+            },
+            {
+                text: '一级文本6',
+                value: '6',
+                children: []
+            },
+            {
+                text: '一级文本7',
+                value: '7',
+                children: []
+            }
+        ];
+
+        function loadData(level, index) {
+
+            var dom = $('<div></div>');
+            dom.addClass("cascader-div cascader-scrollbar");
+
+            if (level == 2) {
+                dom.css({ "left": (200 - 1), "zIndex": 10 - level });
+            }
+            else if (level == 3) {
+                dom.css({ "left": (400 - level - 1), "zIndex": 10 - level });
+            }
+
+            var json = jsonArr;
+            if (level == 2 && index != undefined) {
+                json = jsonArr[index].children;
+            }
+            else if (level == 3 && index != undefined) {
+                var ids = index.split('|');
+                json = jsonArr[ids[0]].children[ids[1]].children;
+            }
+
+            for (var i = 0; i < json.length; i++) {
+                var data = json[i];
+                var option = $('<div><span></span></div>');
+                option.addClass("cascader-item");
+                option.attr('data-value', data.value);
+                option.attr('data-text', data.text);
+                option.attr('data-level', level);
+                if (level == 1) {
+                    option.attr('data-index', i);
+                }
+                else {
+                    option.attr('data-index', index + "|" + i);
+                }
+                option.attr('data-length', data.children.length);
+                // option.attr('data-text', data.children.text);
+
+                $("span", option).eq(0).html(data.text);
+
+                if (data.children.length > 0) {
+                    option.append('<span class="ci-arrow"></span>');
+                }
+
+                dom.append(option);
+            }
+
+            $(".cascader-area").append(dom);
+        }
+
+        $("#cascader2").click(function () {
+
+            var flag = $(this).attr('data-flag');
+            if (flag == undefined || flag == "close") {
+                flag = "open";
+                $(".cascader-area").show();
+                $(".cascader-arrow-down").removeClass("cascader-arrow-down").addClass("cascader-arrow-up");
+            }
+            else {
+                flag = "close";
+                $(".cascader-area").hide();
+                $(".cascader-arrow-up").removeClass("cascader-arrow-up").addClass("cascader-arrow-down");
+            }
+            $(this).attr('data-flag', flag);
+
+            loadData(1);
+        });
+
+        function itemEvent() {
+            $(document).on("click", ".cascader-item", function () {
+                // debugger
+                var level = parseInt($(this).attr('data-level'));
+                var index = $(this).attr('data-index');
+                var length = parseInt($(this).attr('data-length'));
+
+                var parent = $(this).parent();
+                $(".cascader-item", parent).removeClass('cascader-item-action');
+                $(this).addClass('cascader-item-action');
+                // debugger
+                let now_sel = $('.cascader-item-action');
+                console.log(now_sel)
+
+                let text_str = "";
+                for(let i = 0; i < now_sel.length; i++) {
+                    let ele = now_sel[i];
+                    let text = $(ele).attr('data-text')
+                    text_str = text_str + "/" + text;
+                }
+                console.log(text_str);
+                text_str = text_str.substring(1);
+                $("#casc_text").text(text_str);
+
+                $(".cascader-div").eq(level).remove();
+                if (parseInt(length) > 0) {
+                    var next_level = level + 1;
+                    loadData(next_level, index);
+
+                    $(".cascader-area").css({ "width": next_level * 200 - next_level });
+                }
+                else {
+
+                    $(".cascader-area").css({ "width": level * 200 - level });
+                }
+            });
+        }
+        itemEvent();
+
+    });
+</script>

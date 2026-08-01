@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PLMPLUS</title>
+    <meta name="keywords" content="模板">
+    <meta name="description" content="模板">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <!-- <link rel="icon" href="images/favicon.ico"> -->
+    <link rel="stylesheet" href="./C_Style/lay-css/css/layui.css" media="all">
+    <link rel="stylesheet" href="./C_Style/lay-css/layuimini.css" media="all">
+    <link rel="stylesheet" href="./C_Style/iconfont/iconfont.css" media="all">
+    <link rel="stylesheet" href="./C_Style/lay-css/font-awesome-4.7.0/css/font-awesome.min.css" media="all">
+    <style id="layuimini-bg-color">
+    </style>
+
+    <script type="text/javascript">
+        document.write("<script type='text/javascript' src='./D_Javascript/utils/Api.js?random=" + Math.random() + "'></s" + "cript>");
+    </script>
+
+    <style>
+        .zdy_menu_logo_body_width {
+            width: 130px !important;
+        }
+
+        .layui-logo {
+            width: 130px !important;
+        }
+
+        .layui-layout-body {
+            width: 130px !important;
+        }
+
+        .layui-side {
+            width: 130px !important;
+        }
+
+        .layui-side-scroll {
+            width: 130px !important;
+        }
+
+        .layui-body {
+            left: 130px !important;
+        }
+
+        .layui-nav.layui-nav-tree {
+            width: 130px !important;
+        }
+
+        .layui-layout-admin .layui-body {
+            top: 30px !important
+        }
+
+        .layui-tab .layui-tab-title li {
+            padding: 0px 8px;
+        }
+
+        .zdy_a_padding {
+            padding: 0px 15px 0px 8px !important;
+        }
+
+        .zdy_a_padding_top_btn {
+            padding: 0px 10px !important;
+        }
+
+        .drag {
+            /* 设置该属性表明这是可拖拽区域，用来移动窗口 */
+            -webkit-app-region: drag;
+        }
+
+        .no-drag {
+            -webkit-app-region: no-drag;
+        }
+
+        .layui-layout-right a .iconfont {
+            font-size: 14px;
+        }
+
+        .layui-layout-right .layui-nav-item:hover {
+            background-color: rgba(0, 0, 0, 0.15);
+        }
+
+        .layui-layout-right .close-btn:hover {
+            background: #fb7373;
+            color: #fff;
+        }
+
+        .layui-layout-right a {
+            padding: 0 10px !important;
+        }
+
+        .win-top {
+            /* background: #ddd; */
+            /* color: #07c160; */
+            color: #000;
+        }
+
+        .layui-menu-tips {
+            height: 30px !important;
+            line-height: 30px !important;
+            /* border-bottom: #ccc 1px solid; */
+        }
+
+        .layui-left-menu .layui-nav .layui-nav-item a {
+            padding: 2px 5px !important;
+        }
+
+        .pop-style {
+            position: absolute;
+            right: 3px;
+            top: 5px;
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 16px;
+            background-color: #ff0000;
+            border-radius: 10px;
+        }
+
+        .pop-style-pd4 {
+            padding: 0px 4px;
+        }
+
+        .pop-style-pd3 {
+            padding: 0px 3px;
+        }
+
+        .pop-word {
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="layui-layout-body layuimini-all">
+    <div class="layui-layout layui-layout-admin">
+        <div id="layui-main-head" class="layui-header header drag">
+            <div class="layui-logo">
+            </div>
+            <a>
+                <div class="layuimini-tool no-drag"><i title="展开" class="fa fa-outdent" data-side-fold="1"></i></div>
+            </a>
+
+            <ul class="layui-nav layui-layout-left layui-header-menu layui-header-pc-menu mobile layui-hide-xs no-drag">
+            </ul>
+            <ul class="layui-nav layui-layout-left layui-header-menu mobile layui-hide-sm no-drag">
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="fa fa-list-ul"></i> 选择模块</a>
+                    <dl class="layui-nav-child layui-header-mini-menu">
+                    </dl>
+                </li>
+            </ul>
+
+            <ul class="layui-nav layui-layout-right no-drag">
+                <li class="layui-nav-item" lay-unselect>
+
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll layui-left-menu">
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <div class="layui-tab" lay-filter="layuiminiTab" id="top_tabs_box">
+                <ul class="layui-tab-title" id="top_tabs">
+                    <li class="layui-this" id="layuiminiHomeTabId" lay-id=""></li>
+                </ul>
+                <ul class="layui-nav closeBox">
+                    <li class="layui-nav-item ">
+                        <a href="javascript:;" class="zdy_a_padding"> <i class="fa fa-dot-circle-o"></i> <span
+                                data-word-page-opt="main"></span></a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" data-page-close="other"><i class="fa fa-window-close"></i> <span
+                                        data-word-page-close="other"></span></a></dd>
+                            <dd><a href="javascript:;" data-page-close="all"><i class="fa fa-window-close-o"></i> <span
+                                        data-word-page-close="all"></span></a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item" lay-unselect>
+                        <a href="javascript:;" class="zdy_a_padding_top_btn" data-refresh="刷新"><i
+                                class="fa fa-refresh"></i></a>
+                    </li>
+                    <li class="layui-nav-item" lay-unselect>
+                        <a href="javascript:;" class="zdy_a_padding_top_btn" data-clear="清理" class="layuimini-clear"><i
+                                class="fa fa-trash-o"></i></a>
+                    </li>
+                    <li class="layui-nav-item mobile layui-hide-xs" lay-unselect>
+                        <a href="javascript:;" class="zdy_a_padding_top_btn" data-check-screen="full"><i
+                                class="fa fa-arrows-alt"></i></a>
+                    </li>
+                    <li class="layui-nav-item layuimini-setting">
+                        <a href="javascript:;" id="a_user_name">用户</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="javascript:;" class="login-out">退出登录</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item layuimini-select-bgcolor mobile layui-hide-xs" lay-unselect>
+                        <a href="javascript:;" data-bgcolor="配色方案"><i class="fa fa-ellipsis-v"></i></a>
+                    </li>
+                </ul>
+                <div class="layui-tab-content clildFrame">
+                    <div id="layuiminiHomeTabIframe" class="layui-tab-item layui-show">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- <script type='text/javascript' src='./D_Javascript/utils/Api.js'></script> -->
+    <script src="./D_Javascript/ht_kuangjia/lay-module/layui.js" charset="utf-8"></script>
+    <script src="./D_Javascript/ht_kuangjia/lay-module/layuimini/layuimini.js" charset="utf-8"></script>
+    <script src="./D_Javascript/utils/XwUtils.js" charset="utf-8"></script>
+
+    <!-- <script src="./utils/WinOp.js" charset="utf-8"></script> -->
+    <!-- <script src="js/lay-config.js?v=1.0.4" charset="utf-8"></script> -->
+    <script>
+        layui.use(['element', 'layer', 'layuimini'], function () {
+            var $ = layui.jquery,
+                element = layui.element,
+                layer = layui.layer;
+
+            // $("#a_test").on("click", function() {
+            //     window.open("www.baidu.com")
+            // });
+
+            $('.login-out').on("click", function () {
+                layer.msg('退出登录成功', function () {
+                    setCookie("token", null)
+                    window.location = './login.html';
+                });
+            });
+            var init_json = init_menu();
+
+            // layuimini.init('./D_Javascript/ht_kuangjia/api/init.json');
+            layuimini.init(init_json);
+
+            // $(".layui-logo").
+
+            // 初始化气泡
+            $(`.layui-menu-tips .layui-left-nav`).each(function (e) {
+                // console.log($(this).text());
+                let cd_id = $(this).text().split(".")[0];
+                let obj = pop_list.find(p => p.cd_id == cd_id);
+                // 父元素
+                if (!isUndefine(obj) && obj.count != 0) {
+                    let count_str = obj.count;
+                    if (obj.count > 99) {
+                        count_str = "99+";
+                    }
+                    let str = "";
+                    if ((count_str + "").length == 1) {
+                        str = `<div class="pop-style pop-style-pd4" data-pop><span class="pop-word">${count_str}</span></div>`
+                    }
+                    else {
+                        str = `<div class="pop-style pop-style-pd3" data-pop><span class="pop-word">${count_str}</span></div>`
+                    }
+                    $(this).closest('.layui-menu-tips').append(str);
+                }
+            });
+
+
+            $("[data-word-page-opt='main']").text(get_lan_new_str("页面操作"));
+            $("[data-word-page-close='other']").text(get_lan_new_str("关闭其他"));
+            $("[data-word-page-close='all']").text(get_lan_new_str("关闭所有"));
+            $("[data-word-lan='language']").text(get_lan_new_str("语言"));
+
+        });
+
+        var $ = layui.jquery;
+        $('body').on('click', '[data-openew]', function () {
+            var path = "./app/src/renderer/page/2001.html"
+            ipcRenderer.send('openNewBrow', { path })
+        });
+
+        let pop_list = [];
+        const init_menu = () => {
+            var apiurl = APIS.getUserMenu;
+            var re_obj = tf_ajax({ pt: "pc" }, apiurl);
+            if (re_obj.flag == 1) {
+                layui.use(['layer'], function () {
+                    var layer = layui.layer;
+                    layer.msg("开始获取菜单数据");
+                });
+                var init_json = {
+                    "clearInfo": {
+                        "clearUrl": "api/clear.json"
+                    },
+                    "homeInfo": {
+                        "title": "首页",
+                        "icon": "fa fa-home",
+                        "href": "page/welcome-1.html?t=1"
+                    },
+                    "logoInfo": {
+                        "title": "PLM",
+                        "image": "./E_image/BLICON.png",
+                        "href": ""
+                    },
+                };
+
+                var json = re_obj.data.list_cd;
+                pop_list = re_obj.data.list_qp; // 气泡
+                var p_list = json.filter(p => p.p_id == 0);
+                $("#a_user_name").text(re_obj.data.yh_obj.name);
+
+                // var p_list = Object.assign([], json);
+                var menuInfo = {
+                    "currency": {
+                        "title": "PLM",
+                        "icon": "fa fa-address-book",
+                        "child": []
+                    }
+                }
+                for (var i = 0; i < p_list.length; i++) {
+                    var obj = p_list[i];
+                    var z_list = json.filter(p => p.p_id == p_list[i].cd_id);
+                    var new_p_obj = {
+                        "title": obj.cd_id + "." + get_lan_new_str(obj.cd_title),
+                        "href": obj.cd_url,
+                        "icon": "fa fa-file-text",
+                        "target": "_self",
+                        "child": []
+                    }
+                    for(var j = 0; j < z_list.length; j++) {
+                        var son_obj = z_list[j];
+                        son_obj.cd_title = get_lan_new_str(son_obj.cd_title);
+                        var new_son_obj = {
+                            "title": "&nbsp;&nbsp;" + son_obj.cd_title,
+                            "href": son_obj.cd_url,
+                            "icon": "fa fa-address-book",
+                            "target": "_self",
+                        }
+                        new_p_obj.child.push(new_son_obj);
+                    }
+                    menuInfo.currency.child.push(new_p_obj);
+                }
+                init_json.menuInfo = menuInfo;
+                console.log(init_json)
+                return init_json;
+            }
+            else {
+                layui.use(['layer'], function () {
+                    var layer = layui.layer;
+                    layer.alert("初始化失败");
+                    return;
+                });
+            }
+        }
+
+        //#region 原生token操作
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) {
+                return decodeURIComponent(parts.pop().split(';').shift());
+            }
+            return null;
+        }
+
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + encodeURIComponent(value) + expires + "; path=/";
+        }
+        //#endregion
+
+        // var api_yuming = "http://127.0.0.1:1901/";
+        // var api_yuming = "http://124.71.47.225:4001/";
+        function tf_ajax(JsonPara, apiurl) {
+            var api_yuming = APIS.api_yuming;
+            var $ = layui.jquery;
+            var re_obj = null;
+            var token = getCookie("token");
+            if (token == null || token == "null") {
+                var tzurl = "";
+                var tzpage = "login.html";
+                var bdpage = window.location.pathname;
+                bdpage = bdpage.substring(bdpage.lastIndexOf('/') + 1, bdpage.length);
+                if (bdpage == "index.html") { tzurl = tzpage; } else { tzurl = "../login.html"; }
+                if (window != top) {
+                    top.location.href = tzurl;
+                } else {
+                    location.href = tzurl;
+                }
+                return;
+            }
+            $.ajax({
+                type: "post",
+                url: api_yuming + apiurl,
+                data: JSON.stringify(JsonPara),
+                dataType: "json",
+                traditional: true,
+                async: false,
+                contentType: "application/json; charset=utf-8",
+                beforeSend: function (XMLHttpRequest) {
+                    XMLHttpRequest.setRequestHeader("token", token);
+                },
+                success: function (data) {
+                    re_obj = data;
+                },
+                error: function (data) {
+                    re_obj = data;
+                }
+            });
+            return re_obj;
+        }
+
+        function say_hello() {
+            var path = "./app/src/renderer/page/2001.html"
+            ipcRenderer.send('openNewBrow', { path })
+        }
+
+        $('body').on('click', '[data-chinese]', function () {
+            localStorage.setItem('moren_lan_id', 1)
+            get_lang_list_temp_main();
+            location.reload(true)
+        });
+
+        $('body').on('click', '[data-english]', function () {
+            localStorage.setItem('moren_lan_id', 2)
+            get_lang_list_temp_main();
+            location.reload(true)
+        });
+
+        //#region 获取语言表
+        function get_lang_list_temp_main() {
+            var JsonPara = { list_id: [8] };
+            var apiurl = "api/lan_csh/get_list";
+            var re_obj = tf_ajax_wtk(JsonPara, apiurl);
+            if (re_obj.flag == 1) {
+                var lang_list = re_obj.data;
+                sessionStorage.setItem('language_list', JSON.stringify(lang_list));
+                return lang_list;
+            }
+        }
+        function tf_ajax_wtk(JsonPara, apiurl) {
+            var re_obj = null;
+            $.ajax({
+                type: "post",
+                url: api_yuming + apiurl,
+                data: JSON.stringify(JsonPara),
+                dataType: "json",
+                traditional: true,
+                async: false,
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    re_obj = data;
+
+                },
+                error: function (data) {
+                    re_obj = data;
+                }
+            });
+            return re_obj;
+        }
+
+        //#endregion
+
+        //#region 国际化取单个
+        function get_lan_new_str(xw_str) {
+
+            var lan_list = JSON.parse(sessionStorage.getItem('language_list'));
+            var moren_lan_id = JSON.parse(localStorage.getItem('moren_lan_id'));
+
+            if (isUndefine(lan_list)) {
+                // lan_list = get_lang_list_temp();
+                // if(isUndefine(lan_list)) {
+                //     return xw_str;
+                // }
+            }
+            if (isUndefine(moren_lan_id)) { moren_lan_id = 1; }
+
+            var new_xw_str = xw_str;
+            if (moren_lan_id == 1) {
+                new_xw_str = xw_str;
+            }
+            else if (moren_lan_id == 2) {
+                var obj = lan_list.find(p => p.Lg_1 == xw_str);
+                if (isUndefine(obj)) { new_xw_str = xw_str; }
+                else { new_xw_str = obj.Lg_2; }
+            }
+            else if (moren_lan_id == 3) {
+                var obj = lan_list.find(p => p.Lg_1 == xw_str);
+                if (isUndefine(obj)) { new_xw_str = xw_str; }
+                else { new_xw_str = obj.Lg_3; }
+            }
+
+            if (isUndefine(new_xw_str)) { new_xw_str = xw_str; }
+            return new_xw_str;
+        }
+        //#endregion
+
+        //#region 判空
+        function isUndefine(item) {
+            if (item == undefined || item == null || item == "undefined" || item == "null" || item == "") {
+                return true;
+            }
+            return false;
+        }
+//#endregion
+    </script>
+</body>
+
+</html>

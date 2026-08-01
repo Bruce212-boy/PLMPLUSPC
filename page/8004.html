@@ -1,0 +1,256 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>权限设定</title>
+
+    <script type="text/javascript" src="../D_Javascript/ht_kuangjia/jquery.min.js"></script>
+    <script type="text/javascript" src="../D_Javascript/ht_kuangjia/layui.js"></script>
+    <!-- <link rel="stylesheet" href="../C_Style/page/8004.css" media="all"> -->
+
+    <script type="text/javascript">
+        document.write("<link rel='stylesheet' type='text/css' class='skin_sel_class'/>");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/lay-css/css/layui.css?random=" + Math.random() + "' />");
+        // document.write("<link rel='stylesheet' type='text/css' href='../C_Style/Public.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/page/8004.css?random=" + Math.random() + "' />");
+        // document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xw_grid.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xwStyle.css?random=" + Math.random() + "' />");
+
+        document.write("<link rel='stylesheet' type='text/css' href='../D_Javascript/ht_kuangjia/JExcel/jexcel.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../D_Javascript/ht_kuangjia/JExcel/jsuites.css?random=" + Math.random() + "' />");
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/JExcel/jexcel.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/JExcel/jsuites.js?random=" + Math.random() + "'></s" + "cript>");
+
+
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/xw_grid.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/Public.js?random=" + Math.random() + "'></s" + "cript>");
+        // document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/safety.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/Api.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/XwUtils.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/Constans.js?random=" + Math.random() + "'></s" + "cript>");
+
+        document.write("<script type='text/javascript' src='../D_Javascript/page/8004.js?random=" + Math.random() + "'></s" + "cript>");
+
+    </script>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body style="height:100%">
+
+    <div class="main">
+
+        <div class="content clearfix">
+            <div class="top_box bbt_none">
+                <div class="top_box_title" data-word="权限设定">
+                    权限设定
+                </div>
+                <div class="top_box_btn_group">
+                    <!-- <div onclick="csh_update_name();" class="top_box_btn_item add_auto"><span
+                            class="my-icon layui-icon layui-icon-ok"></span><span class="text"
+                            data-word="添加角色">添加角色</span></div> -->
+                    <!-- <div style="visibility: hidden;" class="top_box_btn_item"><span
+                            class="my-icon layui-icon layui-icon-delete fcc"></span></div> -->
+
+                    <!-- <div aria-btn-cb="1" class="top_box_btn_item add_auto">
+                                <span class="my-icon layui-icon layui-icon-addition"></span><span class="text ">添加</span></div> -->
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="left-wrapper normal-border">
+                    <div class="search-input">
+                        <input type="text" name="" placeholder="搜索角色" class="layui-input normal-border">
+                    </div>
+                    <div class="role-list">
+                        <!-- <div class="role" inelement="0" data-id="1">
+                            <div class="role-text">管理员</div>
+                            <div class="role-dp-con">
+                                <div class="role-dp" data-id="1">
+                                    <i class="layui-icon layui-icon-more-vertical layui-font-12"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="role" inelement="0" data-id="2">
+                            <div class="role-text">财务人员</div>
+                            <div class="role-dp-con">
+                                <div class="role-dp" data-id="2">
+                                    <i class="layui-icon layui-icon-more-vertical layui-font-12"></i>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+
+                <div class="right-wrapper normal-border">
+                    <div class="layui-tab layui-tab-card full-height-mini">
+                        <ul class="layui-tab-title flex-ul">
+                            <div>
+                                <li class="layui-this" data-tab="1">角色用户</li>
+                                <li data-tab="2">功能权限</li>
+                            </div>
+
+                            <div class="right-group" data-tab-btn="1">
+                                <div onclick="initAssignPermsToUser()" class="top_box_btn_item add_auto mleft-10">
+                                    <span class="my-icon layui-icon layui-icon-ok"></span><span class="text"
+                                        data-word="添加用户">添加用户</span></div>
+
+                                <div onclick="removePermsFromUser()"
+                                    class="top_box_btn_item mleft-10 jexcel_custom_element"><span
+                                        class="my-icon layui-icon layui-icon-set-fill"></span><span class="text fcc"
+                                        data-word="移除用户">移除用户</span></div>
+                            </div>
+
+                            <div class="right-group display_none" data-tab-btn="2">
+                                <div onclick="savePermsPageAndFunList()" class="top_box_btn_item add_auto mleft-10">
+                                    <span class="my-icon layui-icon layui-icon-ok"></span><span class="text"
+                                        data-word="保存">保存</span></div>
+                                <div class="top_box_btn_item mleft-10"><span
+                                        class="my-icon layui-icon layui-icon-set-fill"></span><span class="text fcc"
+                                        data-word="取消">取消</span></div>
+                            </div>
+
+
+                        </ul>
+
+                        <div class="layui-tab-content">
+
+                            <!-- 角色分配用户 -->
+                            <div class="layui-tab-item layui-show">
+                                <div class="tabs-main">
+                                    <div class="tabs-content">
+
+                                        <!-- <div class="top-section">
+                                            <div onclick="initAssignPermsToUser()"
+                                                class="top_box_btn_item add_auto mleft-10"><span
+                                                    class="my-icon layui-icon layui-icon-ok"></span><span class="text"
+                                                    data-word="添加用户">添加用户</span></div>
+                                            <div onclick="removePermsFromUser()"
+                                                class="top_box_btn_item mleft-10 jexcel_custom_element"><span
+                                                    class="my-icon layui-icon layui-icon-set-fill"></span><span
+                                                    class="text fcc" data-word="移除用户">移除用户</span></div>
+                                        </div> -->
+
+
+                                        <div class="main-section">
+                                            <div class="list-con">
+                                                <div id="listUserManager"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 角色分配权限 -->
+                            <div class="layui-tab-item">
+                                <div class="tabs-main">
+                                    <div class="tabs-content">
+                                        <!-- <div class="top-section">
+                                            <div onclick="savePermsPageAndFunList()"
+                                                class="top_box_btn_item add_auto mleft-10"><span
+                                                    class="my-icon layui-icon layui-icon-ok"></span><span class="text"
+                                                    data-word="保存">保存</span></div>
+                                            <div class="top_box_btn_item mleft-10"><span
+                                                    class="my-icon layui-icon layui-icon-set-fill"></span><span
+                                                    class="text fcc" data-word="取消">取消</span></div>
+
+                                        </div> -->
+                                        <div class="main-section">
+                                            <div class="authority-menu">
+                                                <div class="menu-title" data-word="ERP权限">ERP权限</div>
+                                                <!-- <div class="menu-item">角色</div>
+                                                <div class="menu-item">采购</div> -->
+                                            </div>
+                                            <div class="authority-page">
+
+                                                <div class="platform-checkbox-group">
+                                                    <div class="authority-page-con">
+                                                        <div class="top-section">
+                                                            <div class="platform-title">
+                                                                <span data-word="ERP权限">ERP权限</span>
+                                                                <div class="layui-form">
+                                                                    <input data-now-level="all"
+                                                                        lay-filter="all-perms-checkbox" type="checkbox"
+                                                                        name="" title="全选">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="middle-section">
+                                                            <div class="authority-module">
+                                                                <div class="module-title">
+                                                                    <div class="layui-form">
+                                                                        <input type="checkbox" name="roleAllPerms"
+                                                                            title="设置">
+                                                                    </div>
+                                                                    <div class="layui-form">
+                                                                        <input type="checkbox" name="roleAllPerms"
+                                                                            title="功能权限">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="module-content">
+                                                                    <div class="authority-checkbox">
+                                                                        <div class="directory">
+                                                                            <div class="layui-form">
+                                                                                <input type="checkbox" name=""
+                                                                                    title="角色管理">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div role="group" aria-label="checkbox-group"
+                                                                            class="checkbox-group">
+                                                                            <div class="layui-form">
+                                                                                <div class="checkbox-item">
+                                                                                    <input type="checkbox" name=""
+                                                                                        title="设置">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="layui-form">
+                                                                                <div class="checkbox-item">
+                                                                                    <input type="checkbox" name=""
+                                                                                        title="添加/移除用户">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="layui-form">
+                                                                                <div class="checkbox-item">
+                                                                                    <input type="checkbox" name=""
+                                                                                        title="添加/编辑/删除角色"
+                                                                                        class="length">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="layui-form">
+                                                                                <div class="checkbox-item">
+                                                                                    <input type="checkbox" name=""
+                                                                                        title="编辑权限">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

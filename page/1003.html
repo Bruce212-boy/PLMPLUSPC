@@ -1,0 +1,86 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>归属设置</title>
+
+    <script type="text/javascript" src="../D_Javascript/ht_kuangjia/jquery.min.js"></script>
+    <script type="text/javascript" src="../D_Javascript/ht_kuangjia/layui.js"></script>
+
+    <script type="text/javascript">
+        document.write("<link rel='stylesheet' type='text/css' class='skin_sel_class'/>");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/lay-css/css/layui.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/Public.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xw_grid.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xwStyle.css?random=" + Math.random() + "' />");
+
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/xw_grid.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/Public.js?random=" + Math.random() + "'></s" + "cript>");
+        // document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/safety.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/Api.js?random=" + Math.random() + "'></s" + "cript>");
+            document.write("<script type='text/javascript' src='../../D_Javascript/utils/Constans.js?random=" + Math.random() + "'></s" + "cript>");
+            document.write("<script type='text/javascript' src='../../D_Javascript/utils/BtnPerms.js?random=" + Math.random() + "'></s" + "cript>");
+            document.write("<script type='text/javascript' src='../../D_Javascript/utils/XwUtils.js?random=" + Math.random() + "'></s" + "cript>");
+
+        document.write("<script type='text/javascript' src='../D_Javascript/page/1003.js?random=" + Math.random() + "'></s" + "cript>");
+
+    </script>
+
+    <style>
+    .xw_left_con { width: 420px; }
+    .xw_mid_con { width: calc(100% - 425px); }
+    .con_height { height: calc(100vh - 89px); }
+    .con_height_nopage { height: calc(100vh - 56px); }
+    </style>
+
+</head>
+
+<body style="height:100%">
+
+    <div class="main min-wid900">
+        <div class="content">
+            <div class="flex_box">
+
+                <div class="content xw_left_con">
+                    <div class="top_box bbt_none">
+                        <div class="top_box_title" data-word="归属设置">
+                            归属设置
+                        </div>
+                        <div class="top_box_btn_group mgl_left">
+                            <!-- <div onclick="getdata_1();" class="top_box_btn_item"><span class="my-icon layui-icon layui-icon-search"></span><span class="text fcc" data-word="查询">查询</span></div> -->
+                        </div>
+                    </div>
+                    <div id="con_1" class="content ">
+                        <div class="xw_grid_main xw_grid_main_style con_height_nopage">
+                            <div id="list_1" class="xw_grid_con"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content xw_mid_con">
+                    <div class="top_box bbt_none">
+                        <div class="top_box_title" data-word="归属信息">
+                            归属信息
+                        </div>
+                        <div class="top_box_btn_group mgl_left">
+                            <!-- <div onclick="" class="top_box_btn_item add_auto"><span
+                                    class="my-icon layui-icon layui-icon-addition"></span><span class="text"
+                                    data-word="添加">添加</span></div> -->
+                        </div>
+                        <div class="top_box_btn_group mgl_auto"></div>
+                    </div>
+                    <div id="con_2" class="content">
+                        <div class="xw_grid_main xw_grid_main_style con_height_nopage">
+                            <div id="list_2" class="xw_grid_con"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

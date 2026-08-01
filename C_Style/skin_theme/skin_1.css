@@ -1,0 +1,61 @@
+:root {
+    /* xw_grid */
+    --xw-grid-th-bgc: #e1e1e1;
+    --xw-grid-tr-hover-bgc: #e7ed65;
+    --xw-grid-seled-bgc: #e7ed65;
+    --xw-grid-seled-hover-bgc: #e7ed65;
+    --xw-grid-td-font-size: 14px;
+    --xw-grid-tr-height: 26px;
+    --xw-grid-sel-width: 24px;
+
+    --xw-grid-td-border-bgc: #7194ad;
+
+    --xw-grid-bottom-background-color: #f0f0f0;
+
+    --guide-head-bgc: -webkit-linear-gradient(90deg, #9cc7f5, #d6e3f2, #9cc7f5);
+
+    /* 按钮 */
+    /* background-color: #6783ce;  */
+    /* background-color: #4471ec; */
+    --input-button-bgc: -webkit-linear-gradient(top,#6783ce,#819be0,#6783ce);
+    --input-button-hover-bgc: -webkit-linear-gradient(top,#4471ec,#819be0,#4471ec);
+
+    /* 图纸的按钮 */
+    --input-tz-btn-bgc: -webkit-linear-gradient(top,#6783ce,#819be0,#6783ce);
+    --input-tz-btn-hover-bgc: -webkit-linear-gradient(top,#4471ec,#819be0,#4471ec);
+
+    --input-tz-btn-del-bgc: -webkit-linear-gradient(top,#e36565,#e39595,#e36565); 
+    --input-tz-btn-del-hover-bgc: -webkit-linear-gradient(top,#f22525,#e36565,#f02020); 
+
+    --input-tz-btn-view-bgc: -webkit-linear-gradient(top,#d865e3,#df95e3,#d865e3); 
+    --input-tz-btn-view-hover-bgc: -webkit-linear-gradient(top,#de1ef0,#d865e3,#de1ef0); 
+
+
+    /* 侧边栏 */
+    --side-bar-bgc: #0E5E9E;
+    --side-bar-hover-bgc: #008ED2;
+    --side-bar-ul-bgc: #0078B3;
+    --side-bar-ul-hover-bgc: #6681cd;
+    --side-bar-ul-active-bgc: #5676cd;
+    --side-bar-font-color: #fff;
+
+    --top-bar-bgc: #0E5E9E;
+
+    /* title */
+    --title-bg-img: -webkit-linear-gradient(top,#ABD6F1,#DBEEF9,#ABD6F1);
+    --title-font-color: #000;
+    --title-font-color-hover: #003cff;
+    --bread-bgc: #6783ce;
+    --bread-font-color: #fff;
+
+
+    /* 一些border */
+    --some-border-bgc: #A6C9E2;
+
+    /* 旧gird样式 */
+    --grid-th-bgc: #e1e1e1;
+    --grid-td-height: 30px;
+    --grid-th-td-border-bgc: #888;
+    --grid-th-font-color: #000;
+
+}

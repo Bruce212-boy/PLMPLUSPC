@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>客户信息</title>
+    <script src="../../D_Javascript/My97DatePicker/WdatePicker.js"></script>
+
+    <script type="text/javascript" src="../D_Javascript/ht_kuangjia/jquery.min.js"></script>
+    <script type="text/javascript" src="../D_Javascript/ht_kuangjia/layui.js"></script>
+    <script type="text/javascript">
+        document.write("<link rel='stylesheet' type='text/css' class='skin_sel_class'/>");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/page/1001.css?random=" + Math.random() + "' />");
+
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/lay-css/css/layui.css?random=" + Math.random() + "' />");
+        // document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xw_grid.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xwStyle.css?random=" + Math.random() + "' />");
+
+        document.write("<link rel='stylesheet' type='text/css' href='../D_Javascript/ht_kuangjia/JExcel/jexcel.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../D_Javascript/ht_kuangjia/JExcel/jsuites.css?random=" + Math.random() + "' />");
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/JExcel/jexcel.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/JExcel/jsuites.js?random=" + Math.random() + "'></s" + "cript>");
+
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/xw_grid.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/ht_kuangjia/Public.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/ht_kuangjia/xlsx.full.min.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/Api.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/XwUtils.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/Constans.js?random=" + Math.random() + "'></s" + "cript>");
+
+        document.write("<script type='text/javascript' src='../D_Javascript/page/1001.js?random=" + Math.random() + "'></s" + "cript>");
+    </script>
+
+    <style>
+        /* .icon-cust { margin-top: 0px !important; font-size: 26px; color: #1296db; }
+.icon-cust:hover { color: #ff0000; }
+
+.xw_left_con { width: 300px; }
+.xw_right_con { width: calc(100% - 305px); }
+.con1_height { height: calc(50vh - 89px); }
+.con1_height_nopage { height: calc(100vh - 56px); }
+
+.con2_height { height: calc(50vh - 65px); }
+
+.tk_con_height88 { height: 88%; }
+.tk_con_height95 { height: 95%; }
+.tk_con_height95-40 { height: calc(95% - 40px); }
+.tk_con_height99-10 { height: calc(99% - 10px); }
+.tk_con_height68 { height: 68%; } */
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="top-wrapper">
+                <div class="top-section top_box bbt_none">
+                    <div class="top_box_title" data-word="客户信息">
+                        客户信息
+                    </div>
+                    <div class="top_box_btn_group">
+                        <table class="qb_table">
+                            <tr>
+                                <td>
+                                    <input id="txtCustomerStartTime" class="date_input"
+                                        onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" type="text"
+                                        placeholder="开始日期" />
+                                </td>
+                                <td>
+                                    <span data-word="至">至</span>
+                                </td>
+                                <td>
+                                    <input id="txtCustomerEndTime" class="date_input"
+                                        onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" type="text"
+                                        placeholder="结束日期" />
+                                </td>
+                                <td>
+                                    <div class="top_box_btn_item" data-perm="customer.manager.search" data-action="bindGetDataCustomerManagerList"><span
+                                            class="my-icon layui-icon layui-icon-search"></span><span
+                                            class="text fcc" data-word="查询">查询</span></div>
+                                </td>
+                                <td>
+                                    <div data-perm="customer.manager.senior.search" data-action="seniorGetDataCustomerRegion" class="top_box_btn_item"><span
+                                            class="my-icon layui-icon layui-icon-search"></span><span
+                                            class="text fcc" data-word="复合查询">复合查询</span></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="top_box_btn_group mgl_auto jexcel_custom_element">
+                        <div class="top_box_btn_item display_none add_auto" data-perm="customer.manager.add" data-action="initAddCustomer">
+                            <span class="my-icon layui-icon layui-icon-addition"></span>
+                            <span class="text" data-word="添加客户">添加客户</span>
+                        </div>
+                        <div class="top_box_btn_item display_none " data-perm="customer.manager.update" data-action="initUpdateCustomer">
+                            <span class="my-icon layui-icon layui-icon-edit"></span>
+                            <span class="text" data-word="修改客户">修改客户</span>
+                        </div>
+                        <div class="top_box_btn_item display_none " data-perm="customer.manager.delete" data-action="initDelCustomer">
+                            <span class="my-icon layui-icon layui-icon-delete"></span>
+                            <span class="text" data-word="删除客户">删除客户</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="list-section" id="listCustomerManagerCon">
+                    <div id="listCustomerManager"></div>
+                </div>
+                <div class="page-section">
+                    <div id="listCustomerManagerPager"></div>
+                </div>
+            </div>
+
+            <div class="bottom-wrapper">
+                <div class="top-section top_box bbt_none">
+                    <div class="top_box_tab_group">
+                        <!-- <div class="top_box_tab_item active" data-now-tab="1">
+                        <span class="top_box_tab_text" data-word="销售工单">销售工单</span>
+                    </div>
+                    <div class="top_box_tab_item" data-now-tab="2">
+                        <span class="top_box_tab_text" data-word="合同信息">合同信息</span>
+                    </div>
+                    <div class="top_box_tab_item" data-now-tab="3">
+                        <span class="top_box_tab_text" data-word="项目信息">项目信息</span>
+                    </div>
+                    <div class="top_box_tab_item" data-now-tab="4">
+                        <span class="top_box_tab_text" data-word="高级联系人">高级联系人</span>
+                    </div> -->
+                    </div>
+
+                    <div class="top_box_btn_group">
+                        <div class="top_box_split_line"></div>
+                        <table class="qb_table">
+                            <tr>
+                                <td>
+                                    <input id="txt_qb_tab_start_time" class="date_input"
+                                        onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" type="text"
+                                        placeholder="开始日期" />
+                                </td>
+                                <td>
+                                    <span data-word="至">至</span>
+                                </td>
+                                <td>
+                                    <input id="txt_qb_tab_end_time" class="date_input"
+                                        onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" type="text"
+                                        placeholder="结束日期" />
+                                </td>
+                                <td>
+                                    <div onclick="getdata_2(1);" class="top_box_btn_item"><span
+                                            class="my-icon layui-icon layui-icon-search"></span><span
+                                            class="text fcc" data-word="查询">查询</span></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="list-section">
+                    <div id="listCustomerDetails"></div>
+                </div>
+            </div>
+
+        </div>
+</body>
+
+</html>

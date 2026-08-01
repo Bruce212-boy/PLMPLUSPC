@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>我的信息</title>
+    <script type="text/javascript" src="../../D_Javascript/ht_kuangjia/jquery.min.js"></script>
+    <script src="../../D_Javascript/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../D_Javascript/ht_kuangjia/layui.js"></script>
+    <script type="text/javascript">
+        document.write("<link rel='stylesheet' type='text/css' class='skin_sel_class'/>");
+        document.write("<link rel='stylesheet' type='text/css' href='../../C_Style/Public.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/lay-css/css/layui.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xw_grid.css?random=" + Math.random() + "' />");
+        document.write("<script type='text/javascript' src='../../D_Javascript/ht_kuangjia/Public.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/ht_kuangjia/safety.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/xw_grid.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/page/1007.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../D_Javascript/page/show_big_img.js?random=" + Math.random() + "'></s" + "cript>");
+    </script>
+
+    <style>
+        .cust-open-page-skin { border: 1px solid #000; }
+.cust-open-page-skin .layui-layer-title { height: 38px; line-height: 38px; background-image: var(--title-bg-img); font-weight: bold; }
+.cust-open-page-skin .layui-layer-setwin { top: 10px; }
+.cust-layui-btn-center { margin: 0 90px; }
+    .my_img{text-align:center;}
+    .my_img img{width:120px;height:120px;border:solid 2px #000;border-radius:50%;}
+
+    </style>
+
+</head>
+
+<body style="height:100%">
+    <div class="main">
+        <div class="content">
+            <div class="title clearfix">
+                <span class="title_first_span">我的信息</span>
+                
+            </div>
+            <div id="con_kh" class="xw_grid_main" style="height: calc(100vh - 42px);">
+                <table class="grid" style="width:600px; margin-top: 30px;">
+                    <tr><td colspan="3" style="padding: 5px 0;">
+                        <div class="my_img">
+                            <img id="my_img" src="" data-original="">
+                        </div>
+                    </td></tr>
+                    <tr><td class="l" style="width: 90px;">账号</td><td colspan="2" class="r" id="td_username"></td></tr>
+                    <tr><td class="l">密码</td><td colspan="1" class="r" id="td_password"></td><td style="width: 2.5rem;border-left: 1px solid #777;"><input type="button" value="修改" onclick="csh_update_pwd();"></td></tr>
+                    <tr><td class="l">用户名</td><td colspan="2" class="r" id="td_yh_name"></td></tr>
+                    <tr><td class="l">手机</td><td class="tel_td r"><input type="text" id="txt_tel"></td><td style="width: 2.5rem;border-left: 1px solid #777;"><input type="button" value="修改" onclick="update_tel();"></td></tr>
+                    <tr><td class="l">状态</td><td colspan="2" class="r" id="td_yh_zt"></td></tr>
+                    <tr><td class="l">权限</td><td colspan="2" class="r" id="td_qx_title"></td></tr>
+                    <tr><td class="l">微信授权码</td><td colspan="2" class="r" id="td_wx_openid"></td></tr>
+                    <tr ><td class="l">微信昵称</td><td colspan="2" class="r" id="td_wx_nickname"></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+/* #region xw_tree */
+:root { --tree-node-height: 28px;
+        --tree-level-line-ml: 10px;
+        --tree-text-ml: 12px; 
+        --tree-font-size: 14px;
+        --tree-icon-size: 14px;
+    }
+.tree_node { box-sizing: border-box; height: var(--tree-node-height); line-height: 28px; vertical-align: top; }
+/* .tree_node:hover { background-image: -webkit-linear-gradient(90deg, #9cc7f5, #d6e3f2, #9cc7f5); cursor: pointer; user-select: none; } */
+.tree_selected { background-image: -webkit-linear-gradient(90deg, #d88bbe, #d6e3f2, #d88bbe); }
+
+.tree_node_hover { background-image: -webkit-linear-gradient(90deg, #9cc7f5, #d6e3f2, #9cc7f5); cursor: pointer; user-select: none; }
+
+.tree_childen li { background-color: #fff; }
+
+.tree_node i { display: inline-block; }
+.xw_tree_icon { position: relative; margin-left: var(--tree-level-line-ml); background: url("../E_image/add_f_1.png") no-repeat;background-size: var(--tree-icon-size) var(--tree-icon-size); width: var(--tree-icon-size);height: var(--tree-icon-size); cursor: pointer;}
+.xw_tree_icon_hide { position: relative; margin-left: var(--tree-level-line-ml); background: url("../E_image/delr_f_1.png") no-repeat;background-size: var(--tree-icon-size) var(--tree-icon-size); width: var(--tree-icon-size);height: var(--tree-icon-size); cursor: pointer;}
+.xw_tree_icon_son { position: relative; margin-left: var(--tree-level-line-ml); background: url("../E_image/tree_file_1.png") no-repeat;background-size: var(--tree-icon-size) var(--tree-icon-size); width: var(--tree-icon-size);height: var(--tree-icon-size); cursor: pointer;}
+
+.triangle { position: absolute; top: 11px; width: 0; height: 0; border-left: 3px solid transparent; border-right: 3px solid transparent; border-bottom: 4px solid #000; transform: rotate(90deg); cursor: pointer; }
+
+.tree_node a { user-select: none; margin-left: var(--tree-text-ml); font-size: var(--tree-font-size); }
+.tree_node a:hover { color: #000; background-image: -webkit-linear-gradient(90deg, #9cc7f5, #d6e3f2, #9cc7f5); cursor: pointer; user-select: none; }
+
+/* .tree_node,.tree_node a,.tree_node i,.side_line { */
+    /* transition: all 0.3s ease-out; */
+/* } */
+i.flush{display: inline-block;background: url(../E_image/flush.png) no-repeat;background-size: 20px 20px;margin-top: 2px; width: 20px;height: 20px;}
+i.flush:hover{display: inline-block;background: url(../E_image/flush_2.png) no-repeat;background-size: 20px 20px;margin-top: 2px; width: 20px;height: 20px;}
+/* #endregion */

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户管理</title>
+    <script type="text/javascript" src="../../D_Javascript/ht_kuangjia/jquery.min.js"></script>
+    <script src="../../D_Javascript/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../D_Javascript/ht_kuangjia/layui.js"></script>
+    <script type="text/javascript">
+        document.write("<link rel='stylesheet' type='text/css' class='skin_sel_class'/>");
+        document.write("<link rel='stylesheet' type='text/css' href='../../C_Style/Public.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/lay-css/css/layui.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xw_grid.css?random=" + Math.random() + "' />");
+        document.write("<script type='text/javascript' src='../../D_Javascript/ht_kuangjia/Public.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/ht_kuangjia/safety.js?random=" + Math.random() + "'></s" + "cript>");
+
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/xw_grid.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/page/1006.js?random=" + Math.random() + "'></s" + "cript>");
+    </script>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body style="height:100%">
+    <div class="main">
+        <div class="content">
+            <div class="title clearfix">
+                <span class="title_first_span">用户管理</span>
+
+                <div class="sousuo_1">
+                    <span>
+                        <em>搜索字段</em>
+                        <select id="ss_sel_ziduan">
+                            <option value="-1">请选择</option>
+                            <option value="username">账号</option>
+                            <option value="yh_name">用户名</option>
+                            <option value="qx_name">权限</option>
+                        </select>
+                        <input id="ss_txt_key" type="text" />
+                    </span>
+                    <em class="l" style="margin-left: 9px;"><i class="search" title="搜索"
+                            onclick="getdata_1(1);"></i></em>
+                </div>
+                <div class="btn_group_r">
+                    <span onclick="add_csh();">
+                        <em class="r"><i class="add" title="添加用户"></i></em>
+                        <em>添加用户</em>
+                    </span>
+                    <span onclick="update_csh();">
+                        <em class="r"><i class="update" title="修改用户"></i></em>
+                        <em>修改用户</em>
+                    </span>
+                    <span onclick="wx_clear();">
+                        <em class="r"><i class="wx_clear" title="清空授权码"></i></em>
+                        <em>清空授权码</em>
+                    </span>
+                </div>
+            </div>
+            <div id="con_kh" class="xw_grid_main xw_grid_main_style" style="height: calc(100vh - 82px);">
+                <div id="list_1" class="xw_grid_con"></div>
+            </div>
+            <div id="pager" class="pager"></div>
+        </div>
+    </div>
+    <div id="cz_page" class="cz_page"></div>
+    <div id="div_zz" class="div_zz"></div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>用户管理</title>
+<script type="text/javascript" src="../../D_Javascript/ht_kuangjia/jquery.min.js"></script>
+<script src="../../D_Javascript/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../D_Javascript/ht_kuangjia/layui.js"></script>
+
+
+<script type="text/javascript">
+document.write("<link rel='stylesheet' type='text/css' class='skin_sel_class'/>");
+document.write("<link rel='stylesheet' type='text/css' href='../C_Style/lay-css/css/layui.css?random=" + Math.random() + "' />");
+document.write("<link rel='stylesheet' type='text/css' href='../../C_Style/Public.css?random=" + Math.random() + "' />");
+document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xw_grid.css?random=" + Math.random() + "' />");
+document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xwStyle.css?random=" + Math.random() + "' />");
+document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/Public.js?random=" + Math.random() + "'></s" + "cript>");
+document.write("<script type='text/javascript' src='../D_Javascript/utils/Api.js?random=" + Math.random() + "'></s" + "cript>");
+document.write("<script type='text/javascript' src='../D_Javascript/utils/Constans.js?random=" + Math.random() + "'></s" + "cript>");
+    document.write("<script type='text/javascript' src='../../D_Javascript/utils/XwUtils.js?random=" + Math.random() + "'></s" + "cript>");
+
+document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/xw_grid.js?random=" + Math.random() + "'></s" + "cript>");
+// document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/safety.js?random=" + Math.random() + "'></s" + "cript>");
+document.write("<script type='text/javascript' src='../../D_Javascript/page/10002.js?random=" + Math.random() + "'></s" + "cript>");
+</script>
+
+<style>
+</style>
+
+</head>
+
+<body style="height:100%">
+<div class="main min-wid600">
+
+    <div class="content">
+        <div class="top_box bbt_none">
+            <div class="top_box_title">
+                用户管理
+            </div>
+            <div class="top_box_btn_group">
+                <div onclick="csh_add_user();" class="top_box_btn_item add"><span class="my-icon layui-icon layui-icon-addition"></span><span class="text">添加</span></div>
+            </div>
+            <div class="top_box_btn_group mgl_auto">
+                <div onclick="csh_update_user();" class="top_box_btn_item"><span class="my-icon layui-icon layui-icon-edit"></span><span class="text fcc">修改</span></div>
+                <div onclick="csh_del_user();" class="top_box_btn_item"><span class="my-icon layui-icon layui-icon-delete fcc"></span><span class="text fcc">删除</span></div>
+                <div onclick="csh_clean_pc_code();" class="top_box_btn_item"><span class="my-icon layui-icon layui-icon-delete"></span><span class="text fcc">清除PC授权码</span></div>
+                <div onclick="csh_clean_tel_code();" class="top_box_btn_item"><span class="my-icon layui-icon layui-icon-delete"></span><span class="text fcc">清除手机授权码</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div id="con_kh" class="xw_grid_main" style="height: calc(100vh - 90px);">
+            <div id="list_1" class="xw_grid_con" ></div>
+        </div>
+        <div id="pager" class="pager pager-border bt-none"></div>
+    </div>
+</div>
+<div id="cz_page" class="cz_page"></div>
+<div id="div_zz" class="div_zz"></div>
+</body>
+</html>

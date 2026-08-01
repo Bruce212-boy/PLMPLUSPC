@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户参数</title>
+    <script type="text/javascript" src="../../D_Javascript/ht_kuangjia/jquery.min.js"></script>
+    <script src="../../D_Javascript/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../D_Javascript/ht_kuangjia/layui.js"></script>
+    <script type="text/javascript">
+        document.write("<link rel='stylesheet' type='text/css' class='skin_sel_class'/>");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/page/6001.css?random=" + Math.random() + "' />");
+
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/lay-css/css/layui.css?random=" + Math.random() + "' />");
+        // document.write("<link rel='stylesheet' type='text/css' href='../C_Style/iconfont2/iconfont.css?random=" + Math.random() + "' />");
+        // document.write("<link rel='stylesheet' type='text/css' href='../C_Style/Public.css?random=" + Math.random() + "' />");
+        // document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xw_grid.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xwStyle.css?random=" + Math.random() + "' />");
+
+        document.write("<link rel='stylesheet' type='text/css' href='../D_Javascript/ht_kuangjia/JExcel/jexcel.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../D_Javascript/ht_kuangjia/JExcel/jsuites.css?random=" + Math.random() + "' />");
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/JExcel/jexcel.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/JExcel/jsuites.js?random=" + Math.random() + "'></s" + "cript>");
+
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/xw_grid.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/ht_kuangjia/Public.js?random=" + Math.random() + "'></s" + "cript>");
+        // document.write("<script type='text/javascript' src='../../D_Javascript/ht_kuangjia/safety.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/Api.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/XwUtils.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/Constans.js?random=" + Math.random() + "'></s" + "cript>");
+        
+            document.write("<script type='text/javascript' src='../D_Javascript/page/6001.js?random=" + Math.random() + "'></s" + "cript>");
+    </script>
+
+    <style>
+        /* .dd_con { width: 100%; box-sizing: border-box; border: #000 1px solid; overflow: auto;} */
+        /* .dd_con div { float: left;}
+.dd_con table { float: left; } */
+
+.flex_box { display: flex; width: 100%; justify-content: space-between; }
+.xw_left_con { width: 300px; }
+.xw_right_con { width: calc(100% - 305px); }
+.con_height { height: calc(100vh - 89px); }
+.con_height_nopage { height: calc(100vh - 56px); }
+</style>
+
+</head>
+
+<body style="height:100%">
+    <div class="main">
+
+        <div class="content clearfix">
+            <div class="top_box bbt_none">
+                <div class="top_box_title" data-word="用户参数">
+                    用户参数
+                </div>
+                <div class="top_box_btn_group">
+                    <div class="top_box_btn_group jexcel_custom_element">
+                        <div class="top_box_btn_item display_none add_auto" data-perm="user.params.add" data-action="initAddUserParams">
+                            <span class="my-icon layui-icon layui-icon-ok"></span>
+                            <span class="text" data-word="添加功能">添加功能</span>
+                        </div>
+                        <div class="top_box_btn_item display_none " data-perm="user.params.update" data-action="initUpdateUserParams">
+                            <span class="my-icon layui-icon layui-icon-edit"></span>
+                            <span class="text" data-word="修改功能">修改功能</span>
+                        </div>
+                    </div>
+                    <div class="top_box_btn_group mgl_auto jexcel_custom_element">
+                        <div class="top_box_btn_item display_none " data-perm="setting.function.delete" data-action="delFun">
+                            <span class="my-icon layui-icon layui-icon-delete"></span>
+                            <span class="text" data-word="删除功能">删除功能</span>
+                        </div>
+                    </div>
+                
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="flex_box">
+                <div id="con_1" class="content xw_left_con">
+                    <div class="xw_grid_main xw_grid_main_style con_height_nopage">
+                        <div id="listUserParams" class="xw_grid_con"></div>
+                    </div>
+                </div>
+                <div id="con_2" class="content xw_right_con">
+                    <div class="xw_grid_main xw_grid_main_style con_height_nopage">
+                        <div id="listUserParamDetail" class="xw_grid_con"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

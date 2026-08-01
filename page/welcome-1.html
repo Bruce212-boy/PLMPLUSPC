@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>首页</title>
+    <script type="text/javascript" src="../../D_Javascript/ht_kuangjia/jquery.min.js"></script>
+    <script src="../../D_Javascript/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../D_Javascript/ht_kuangjia/layui.js"></script>
+
+    <script type="text/javascript">
+        document.write("<link rel='stylesheet' type='text/css' class='skin_sel_class'/>");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/lay-css/css/layui.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../../C_Style/Public.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xw_grid.css?random=" + Math.random() + "' />");
+        document.write("<script type='text/javascript' src='../../D_Javascript/ht_kuangjia/Public.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/xw_grid.js?random=" + Math.random() + "'></s" + "cript>");
+    </script>
+
+    <style>
+        .chat-div-main { width: 100%; box-sizing: border-box; padding: 5px 10px;  }
+        .chat-div-main .chat-title { font-size: 22px; font-weight: bold; margin-top: 5px }
+        .chat-div-item { width: 100%; border: 1px solid #999; box-sizing: border-box; padding: 12px 12px;  float: left; background: #eee; margin-bottom: 5px; }
+        .chat-item-spec-bg {  background: #eee; }
+        .chat-div-item .user-info { font-size: 16px; margin-bottom: 8px; color: #555; }
+        .chat-div-item .user-info .user-info-word { display: inline-block; vertical-align: middle}
+        .chat-div-item .user-info .user-info-icon { display: inline-block; vertical-align: middle }
+
+        .chat-div-item .gd-content{ font-size: 14px; margin-bottom: 8px; color: #000; line-height: 22px;}
+
+        .chat-div-item .chat-img-main { width: calc(98%); padding: 1px 5px;  float: left; }
+        .chat-div-item .chat-img-main .chat-img-item{ width: 88px; height: 88px; border: 1px solid #333; margin-right: 5px; display: inline-block; }
+
+        .chat-icon-main { cursor: pointer; float: right; margin-right: 8px; }
+        .chat-icon-span { line-height: 22px; font-size: 12px; display: inline-block; vertical-align: middle}
+        .chat-icon-item { font-size: 22px; color: #999; vertical-align: middle}
+        .chat-icon-item:hover { color: #777; }
+
+    </style>
+
+</head>
+
+<body style="height:100%; padding: 5px">
+    <!-- <input type="file" /> -->
+    <!-- <input id="pt_file" type="file" > -->
+
+    <!-- <li class="layui-nav-item ">
+        <a href="javascript:;" class="zdy_a_padding"> <i class="fa fa-gears"></i> <span data-word-lan="language"></span></a>
+        <dl class="layui-nav-child">
+            <dd><a href="javascript:;" data-chinese="zn">中文</a></dd>
+            <dd><a href="javascript:;" data-english="en">English</a></dd>
+        </dl>
+    </li> -->
+
+
+    <!-- <div class="chat-div-main">
+        <div class="chat-title">
+            <span>这是标题</span>
+        </div>
+
+        <div class="chat-div-item">
+            <div class="user-info">
+                <div class="user-info-word">
+                    <span>用户:</span>
+                    <span>德邦</span>
+                </div>
+                <div class="chat-icon-main user-info-icon">
+                    <span class="chat-icon-span">2024/05/04</span>
+                    <i class="layui-icon layui-icon-reply-fill chat-icon-item"></i>
+                </div>
+            </div>
+
+            <div class="gd-content">
+                故事讲述了从前有个人见人爱的小姑娘，喜欢戴着外婆送给她的一顶红色天鹅绒的帽子，于是大家就叫她小红帽。有一天，母亲叫她给住在森林的外婆送食物，并嘱咐她不要离开大路，走得太远。小红帽在森林中遇见了狼，她从未见过狼，也不知道狼性凶残，于是告诉了狼她要去森林里看望自己的外婆。
+            </div>
+            <div class="chat-img-main">
+                <div class="chat-img-item"></div>
+                <div class="chat-img-item"></div>
+                <div class="chat-img-item"></div>
+                <div class="chat-img-item"></div>
+                <div class="chat-img-item"></div>
+                <div class="chat-img-item"></div>
+            </div>
+        </div>
+
+        <div class="chat-div-item chat-div-item-hf">
+            <div class="user-info">
+                <span>用户:</span>
+                <span>德邦</span>
+            </div>
+            <div class="gd-content">
+                故事讲述了从前有个人见人爱的小姑娘，喜欢戴着外婆送给她的一顶红色天鹅绒的帽子，于是大家就叫她小红帽。有一天，母亲叫她给住在森林的外婆送食物，并嘱咐她不要离开大路，走得太远。小红帽在森林中遇见了狼，她从未见过狼，也不知道狼性凶残，于是告诉了狼她要去森林里看望自己的外婆。
+            </div>
+            <div class="chat-img-main">
+                <div class="chat-img-item"></div>
+                <div class="chat-img-item"></div>
+                <div class="chat-img-item"></div>
+                <div class="chat-img-item"></div>
+                <div class="chat-img-item"></div>
+                <div class="chat-img-item"></div>
+            </div>
+            <div class="chat-icon-main">
+                <span class="chat-icon-span">2024-05-05</span>
+                <i class="layui-icon layui-icon-reply-fill chat-icon-item"></i>
+            </div>
+        </div>
+
+    </div> -->
+    <!-- <span class="radio_"><input id="raname_17" type="radio" name="raname" value="17" /><label for="raname_17">123</label></span> -->
+
+    <script>
+    // var rad_obj = $("input[name='raname']:checked"); if (rad_obj.length == 0) { Toast("请选择一条数据"); return; }
+    // var gd_id = rad_obj.val();
+
+
+    // console.log("111")
+    // $("#pt_file").bind("change", function () {
+    //     tf_ajax_upload_image('pt_file', '1', '2');
+    // });
+    // $("#pt_file")[0].click();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+:root {
+    /* xw_grid */
+    --xw-grid-th-bgc: #e1e1e1;
+    --xw-grid-tr-hover-bgc: #9cc7f5;
+    --xw-grid-seled-bgc: #FFACAC;
+    --xw-grid-seled-hover-bgc: #7ee5a1;
+    --xw-grid-td-font-size: 14px;
+    --xw-grid-tr-height: 26px;
+    --xw-grid-sel-width: 24px;
+
+    --xw-grid-td-border-bgc: #7194ad;
+    --xw-grid-bottom-background-color: #f0f0f0;
+
+    
+    --guide-head-bgc: -webkit-linear-gradient(0deg, rgb(189, 255, 212), rgb(255, 179, 249));
+    
+    /* 按钮 */
+    --input-button-bgc: -webkit-linear-gradient(top,#555,#777,#555);
+    --input-button-hover-bgc: -webkit-linear-gradient(top,#222,#999,#222);
+
+    /* 图纸的按钮 */
+    --input-tz-btn-bgc: -webkit-linear-gradient(top,#6783ce,#819be0,#6783ce);
+    --input-tz-btn-hover-bgc: -webkit-linear-gradient(top,#4471ec,#819be0,#4471ec);
+
+    --input-tz-btn-del-bgc: -webkit-linear-gradient(top,#e36565,#e39595,#e36565); 
+    --input-tz-btn-del-hover-bgc: -webkit-linear-gradient(top,#f22525,#e36565,#f02020); 
+
+    --input-tz-btn-view-bgc: -webkit-linear-gradient(top,#d865e3,#df95e3,#d865e3); 
+    --input-tz-btn-view-hover-bgc: -webkit-linear-gradient(top,#de1ef0,#d865e3,#de1ef0); 
+
+    /* 侧边栏 */
+    --side-bar-bgc: #000000;
+    --side-bar-hover-bgc: #333;
+    --side-bar-ul-bgc: #444;
+    --side-bar-ul-hover-bgc: #555;
+    --side-bar-ul-active-bgc: #666;
+    --side-bar-font-color: #fff;
+
+
+    /* title */
+    --title-bg-img: -webkit-linear-gradient(top,#333,#555,#333);
+    --title-font-color: #fff;
+    --title-font-color-hover: #003cff;
+    --bread-bgc: #222;
+    --bread-font-color: #fff;
+
+    /* 一些border */
+    --some-border-bgc: #555;
+    
+    /* 旧gird样式 */
+    --grid-th-bgc: #e1e1e1;
+    --grid-td-height: 30px;
+    --grid-th-td-border-bgc: #888;
+    --grid-th-font-color: #000;
+
+}
+
+/* 黑夜模式专属图标 */
+i.add{ background:url(../../E_image/add_3.png) 0% 0% / 22px 22px no-repeat !important;}
+i.add:hover{ background:url(../../E_image/add_2.png) 0% 0% / 22px 22px no-repeat !important;}
+i.del{ background:url(../../E_image/del_3.png) 0% 0% / 22px 22px no-repeat !important;}
+i.del:hover{ background:url(../../E_image/del_2.png) 0% 0% / 22px 22px no-repeat !important;}
+i.update{ background:url(../../E_image/update_3.png) 0% 0% / 22px 22px no-repeat !important;}
+i.update:hover{ background:url(../../E_image/update_2.png) 0% 0% / 22px 22px no-repeat !important;}
+i.set{ background:url(../../E_image/set_3.png) 0% 0% / 22px 22px no-repeat !important;}
+i.set:hover{ background:url(../../E_image/set_2.png) 0% 0% / 22px 22px no-repeat !important;}
+i.search{ background:url(../../E_image/search_3.png) 0% 0% / 22px 22px no-repeat !important;}
+i.search:hover{ background:url(../../E_image/search_2.png) 0% 0% / 22px 22px no-repeat !important;}
+i.yes{ background:url(../../E_image/yes_3.png) 0% 0% / 22px 22px no-repeat !important;}
+i.yes:hover{ background:url(../../E_image/yes_2.png) 0% 0% / 22px 22px no-repeat !important;}
+i.clear{ background:url(../../E_image/clear_tag_1.png) 0% 0% / 20px 20px no-repeat !important;}
+i.clear:hover{ background:url(../../E_image/clear_tag_2.png) 0% 0% / 20px 20px no-repeat !important;}
+
+i.clear_except{ background:url(../../E_image/clear_except_1.png) 0% 0% / 20px 20px no-repeat !important;}
+i.clear_except:hover{ background:url(../../E_image/clear_except_2.png) 0% 0% / 20px 20px no-repeat !important;}
+
+
+.tk_del_img{ background:url(../../E_image/del_tag_3.png) 0% 0% / 22px 22px no-repeat !important;}
+
+
+i.cc_sh_ic { display:inline-block; background:url(../E_image/cc_sh_3.png) no-repeat; background-size:22px 22px; cursor: pointer; }
+i.cc_sh_ic:hover { display:inline-block; background:url(../E_image/cc_sh_2.png) no-repeat; background-size:22px 22px; cursor: pointer; }
+
+i.cw_sh_ic { display:inline-block; background:url(../E_image/cw_sh_3.png) no-repeat; background-size:22px 22px; cursor: pointer; }
+i.cw_sh_ic:hover { display:inline-block; background:url(../E_image/cw_sh_2.png) no-repeat; background-size:22px 22px; cursor: pointer; }
+
+i.yijian{background: url(../E_image/yijian_3.png) no-repeat;background-size: 22px 22px;}
+i.yijian:hover{background: url(../E_image/yijian_2.png) no-repeat;background-size: 22px 22px;}
+
+i.add_pian{background: url(../E_image/add_pian_3.png) no-repeat;background-size: 22px 22px;}
+i.add_pian:hover{background: url(../E_image/add_pian_2.png) no-repeat;background-size: 22px 22px;}
+
+i.js_ic { display:inline-block; background:url(../E_image/js_ic_3.png) no-repeat; background-size:22px 22px; cursor: pointer; }
+i.js_ic:hover { display:inline-block; background:url(../E_image/js_ic_2.png) no-repeat; background-size:22px 22px; cursor: pointer; }
+
+

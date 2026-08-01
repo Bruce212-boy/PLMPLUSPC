@@ -1,0 +1,96 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户管理</title>
+
+    <script type="text/javascript" src="../D_Javascript/ht_kuangjia/jquery.min.js"></script>
+    <script type="text/javascript" src="../D_Javascript/ht_kuangjia/layui.js"></script>
+
+    <script type="text/javascript">
+        document.write("<link rel='stylesheet' type='text/css' class='skin_sel_class'/>");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/page/8002.css?random=" + Math.random() + "' />");
+
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/lay-css/css/layui.css?random=" + Math.random() + "' />");
+        // document.write("<link rel='stylesheet' type='text/css' href='../C_Style/Public.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../C_Style/xwStyle.css?random=" + Math.random() + "' />");
+
+        document.write("<link rel='stylesheet' type='text/css' href='../D_Javascript/ht_kuangjia/JExcel/jexcel.css?random=" + Math.random() + "' />");
+        document.write("<link rel='stylesheet' type='text/css' href='../D_Javascript/ht_kuangjia/JExcel/jsuites.css?random=" + Math.random() + "' />");
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/JExcel/jexcel.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/JExcel/jsuites.js?random=" + Math.random() + "'></s" + "cript>");
+
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/xw_grid.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../D_Javascript/ht_kuangjia/Public.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/Api.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/XwUtils.js?random=" + Math.random() + "'></s" + "cript>");
+        document.write("<script type='text/javascript' src='../../D_Javascript/utils/Constans.js?random=" + Math.random() + "'></s" + "cript>");
+
+        document.write("<script type='text/javascript' src='../D_Javascript/page/8002.js?random=" + Math.random() + "'></s" + "cript>");
+
+    </script>
+
+    <style>
+    </style>
+
+</head>
+
+<body style="height:100%">
+
+    <div class="main">
+
+        <div class="content clearfix">
+            <div class="top_box bbt_none">
+                <div class="top_box_title" data-word="用户管理">
+                    用户管理
+                </div>
+                <div class="top_box_btn_group jexcel_custom_element">
+                    <div class="top_box_btn_item display_none add_auto" data-perm="user.manager.add"
+                        data-action="initAddUser">
+                        <span class="my-icon layui-icon layui-icon-addition"></span>
+                        <span class="text" data-word="添加用户">添加用户</span>
+                    </div>
+
+                    <div class="top_box_btn_item display_none " data-perm="user.manager.update"
+                        data-action="initUpdateUser">
+                        <span class="my-icon layui-icon layui-icon-edit"></span>
+                        <span class="text" data-word="修改用户">修改用户</span>
+                    </div>
+                    <div class="top_box_btn_item display_none " data-perm="user.manager.grant.role"
+                        data-action="initGrantPermsToUser">
+                        <span class="my-icon layui-icon layui-icon-set-fill"></span>
+                        <span class="text" data-word="分配角色">分配角色</span>
+                    </div>
+                </div>
+                <div class="top_box_btn_group mgl_auto jexcel_custom_element">
+                    <div class="top_box_btn_item display_none " data-perm="user.manager.delete" data-action="delUser">
+                        <span class="my-icon layui-icon layui-icon-delete"></span>
+                        <span class="text" data-word="删除用户">删除用户</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="ak-search-wrapper">
+                <button>123</button>
+            </div> -->
+
+            <div class="container">
+                <div class="left-wrapper normal-border">
+                    <div id="listCompanyTree"></div>
+                </div>
+
+                <div class="right-con">
+                    <div class="right-wrapper normal-border right-top">
+                        <div id="listUserManager"></div>
+                    </div>
+                    <div class="right-footer">
+                        <div id="listUserManagerPager"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+</body>
+
+</html>
